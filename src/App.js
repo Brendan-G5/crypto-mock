@@ -1,13 +1,27 @@
+import React, { useEffect } from "react";
 import logo from './logo.svg';
 import './App.css';
 
+
+import getData from './Services/ApiService';
+
 function App() {
+
+  const [data, setData] = React.useState([]);
+
+
+  useEffect(() => {
+    getData().then((newData) => {
+      setData(newData);
+    })
+  }, []);
+
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Testing Github set-up
+        Something new
         </p>
         <a
           className="App-link"
