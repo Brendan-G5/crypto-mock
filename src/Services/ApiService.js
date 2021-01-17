@@ -1,73 +1,73 @@
 const BASE_URL = 'https://www.stackadapt.com/coinmarketcap';
 
 async function getData() {
-  // const mapData = await fetchRequest('/map?' + new URLSearchParams ({limit:10, sort:'cmc_rank'}))
-  // const symbolList = [];
-  // mapData.data.forEach(element => {
-  //   symbolList.push(element.symbol)
-  // });
-  // const quotesData = await fetchRequest('/quotes?' + new URLSearchParams ({symbol:symbolList, convert:'USD' }));
-  // const finalData = [];
-  // for (const element in quotesData.data) {
-  //   finalData.push({
-  //     cmc_rank: quotesData.data[element].cmc_rank,
-  //     symbol: quotesData.data[element].symbol,
-  //     price: quotesData.data[element].quote.USD.price
-  //   })
-  // }
-  let finalData = [
-    {
-      cmc_rank:0,
-      symbol:'ABC',
-      price:0
-    },
-    {
-      cmc_rank:1,
-      symbol:'ABC',
-      price:1
-    },
-    {
-      cmc_rank:2,
-      symbol:'ABC',
-      price:2
-    },
-    {
-      cmc_rank:3,
-      symbol:'ABC',
-      price:3
-    },
-    {
-      cmc_rank:4,
-      symbol:'ABC',
-      price:4
-    },
-    {
-      cmc_rank:5,
-      symbol:'ABC',
-      price:5
-    },
-    {
-      cmc_rank:6,
-      symbol:'ABC',
-      price:6
-    },
-    {
-      cmc_rank:7,
-      symbol:'ABC',
-      price:7
-    },
-    {
-      cmc_rank:8,
-      symbol:'ABC',
-      price:8
-    },
-    {
-      cmc_rank:9,
-      symbol:'ABC',
-      price:9
-    }
-  ]
-  console.log(finalData, 'Here is the data ebing returned')
+  const mapData = await fetchRequest('/map?' + new URLSearchParams ({limit:10, sort:'cmc_rank'}))
+  const symbolList = [];
+  mapData.data.forEach(element => {
+    symbolList.push(element.symbol)
+  });
+  const quotesData = await fetchRequest('/quotes?' + new URLSearchParams ({symbol:symbolList, convert:'USD' }));
+  const finalData = [];
+  for (const element in quotesData.data) {
+    finalData.push({
+      cmc_rank: quotesData.data[element].cmc_rank,
+      symbol: quotesData.data[element].symbol,
+      price: quotesData.data[element].quote.USD.price
+    })
+  }
+  // let finalData = [
+  //   {
+  //     cmc_rank:0,
+  //     symbol:'ABC',
+  //     price:0
+  //   },
+  //   {
+  //     cmc_rank:1,
+  //     symbol:'DEF',
+  //     price:1
+  //   },
+  //   {
+  //     cmc_rank:2,
+  //     symbol:'GHI',
+  //     price:2
+  //   },
+  //   {
+  //     cmc_rank:3,
+  //     symbol:'JKL',
+  //     price:3
+  //   },
+  //   {
+  //     cmc_rank:4,
+  //     symbol:'MNO',
+  //     price:4
+  //   },
+  //   {
+  //     cmc_rank:5,
+  //     symbol:'PQR',
+  //     price:5
+  //   },
+  //   {
+  //     cmc_rank:6,
+  //     symbol:'STU',
+  //     price:6
+  //   },
+  //   {
+  //     cmc_rank:7,
+  //     symbol:'VWX',
+  //     price:7
+  //   },
+  //   {
+  //     cmc_rank:8,
+  //     symbol:'YZ1',
+  //     price:8
+  //   },
+  //   {
+  //     cmc_rank:9,
+  //     symbol:'234',
+  //     price:9
+  //   }
+  // ]
+  // console.log(finalData, 'Here is the data ebing returned')
   return finalData;
 }
 

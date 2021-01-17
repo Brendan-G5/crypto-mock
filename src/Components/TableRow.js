@@ -2,6 +2,8 @@ import '../App.css';
 import { connect } from 'react-redux'
 import React, { Component } from 'react';
 
+import {TransferElement} from '../Redux/Actions/Actions'
+
 
 export class Table extends Component {
 
@@ -20,7 +22,7 @@ export class Table extends Component {
           {data.price}
         </td>
         <td>
-          X
+          <button onClick={() => this.props.TransferElement(data)}>X</button>
         </td>
       </tr>
     )
@@ -28,4 +30,4 @@ export class Table extends Component {
 }
 
 
-export default connect()(Table);
+export default connect(null, {TransferElement})(Table);

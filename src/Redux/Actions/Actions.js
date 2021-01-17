@@ -19,5 +19,11 @@ export const DisplayData = () => dispatch => {
       payload: []
     })
   })
+}
 
+export const TransferElement = (data) => dispatch => {
+  dispatch({
+    type: UPDATE_DATA,
+    payload: data
+  })
 }

@@ -8,6 +8,12 @@ const defaultState = {
   error: false
 }
 
+const sortByCmc = (arr) => {
+  return arr.sort(function (a, b) {
+    return a.cmc_rank - b.cmc_rank
+  });
+}
+
 export default function (state = defaultState, action) {
   switch (action.type) {
 
@@ -22,9 +28,29 @@ export default function (state = defaultState, action) {
       console.log('SET_DATA HAPPENING!',)
       return {
         ...state,
-        visableData: action.payload.slice(0,5),
+        visableData: action.payload.slice(0, 5),
         dropdownData: action.payload.slice(5),
         loading: false
+      }
+    case UPDATE_DATA:
+
+      console.log(state.dropdownData)
+      if (state.visableData.includes(action.payload)) {
+        return {
+          ...state,
+          visableData: sortByCmc(state.visableData.filter((el) => {
+            return el.symbol !== action.payload.symbol
+          })),
+          dropdownData: sortByCmc([...state.dropdownData, action.payload])
+        }
+      } else {
+        return {
+          ...state,
+          visableData: sortByCmc([...state.visableData, action.payload]),
+          dropdownData: sortByCmc(state.dropdownData.filter((el) => {
+            return el.symbol !== action.payload.symbol
+          }))
+        }
       }
     default: return {
       ...state

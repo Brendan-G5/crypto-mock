@@ -4,7 +4,8 @@ import React, { Component } from 'react';
 
 import TableRow from './Components/TableRow';
 
-import { DisplayData } from './Redux/Actions/Actions'
+import { DisplayData, TransferElement } from './Redux/Actions/Actions';
+
 
 
 
@@ -18,6 +19,9 @@ export class App extends Component {
   render() {
     const { visableData, dropdownData, loading, error } = this.props;
 
+    console.log('VISABLE', visableData);
+    console.log('DROPDOWN', dropdownData);
+
 
     const table = (
       <table>
@@ -30,10 +34,28 @@ export class App extends Component {
       </table>
     )
 
+    const manageClick = () => {
+      let index = document.getElementById('selected').value;
+      console.log(dropdownData[index])
+      this.props.TransferElement((dropdownData[index]));
+    }
+
+    const dropdown = (
+      <div>
+      <label>Add another Currency</label>
+      <select id='selected'  onChange= {manageClick}>
+      <option selected="selected" >--</option>
+        {dropdownData.map((element, index) => <option key={element.symbol} value={index}> {element.symbol}</option>)}
+      </select>
+      </div>
+    )
+
+
 
 
     return (
       <div>
+        {dropdown}
         {table}
       </div>
     )
@@ -50,4 +72,4 @@ const mapStateToProps = state => ({
   error: state.error
 })
 
-export default connect(mapStateToProps, { DisplayData })(App);
+export default connect(mapStateToProps, { DisplayData, TransferElement })(App);
