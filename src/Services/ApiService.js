@@ -12,7 +12,8 @@ async function getData() {
     finalData.push({
       cmc_rank: quotesData.data[element].cmc_rank,
       symbol: quotesData.data[element].symbol,
-      price: quotesData.data[element].quote.USD.price
+      price: quotesData.data[element].quote.USD.price,
+      name: quotesData.data[element].name
     })
   }
   // let finalData = [

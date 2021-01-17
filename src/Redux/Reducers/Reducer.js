@@ -30,11 +30,10 @@ export default function (state = defaultState, action) {
         ...state,
         visableData: action.payload.slice(0, 5),
         dropdownData: action.payload.slice(5),
-        loading: false
+        loading: false,
+        error: false
       }
     case UPDATE_DATA:
-
-      console.log(state.dropdownData)
       if (state.visableData.includes(action.payload)) {
         return {
           ...state,
@@ -51,6 +50,11 @@ export default function (state = defaultState, action) {
             return el.symbol !== action.payload.symbol
           }))
         }
+      }
+    case SET_ERROR:
+      return {
+        ...state,
+        error: true
       }
     default: return {
       ...state

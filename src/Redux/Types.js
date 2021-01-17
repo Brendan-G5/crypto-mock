@@ -1,5 +1,4 @@
 //ALL TYPES
-
 export const LOADING_DATA = 'LOADING_DATA';
 export const SET_DATA = 'SET_DATA';
 export const UPDATE_DATA = 'UPDATE_DATA';

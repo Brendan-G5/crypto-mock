@@ -3,7 +3,6 @@ import {LOADING_DATA, SET_DATA, UPDATE_DATA, SET_LOADING, SET_ERROR} from '../Ty
 
 
 export const DisplayData = () => dispatch => {
-
   dispatch({
     type: LOADING_DATA
   })
@@ -15,8 +14,7 @@ export const DisplayData = () => dispatch => {
   }
   ).catch(err => {
     dispatch({
-      type: SET_ERROR,
-      payload: []
+      type: SET_ERROR
     })
   })
 }
