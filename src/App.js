@@ -1,39 +1,53 @@
-import React, { useEffect } from "react";
-import logo from './logo.svg';
 import './App.css';
+import { connect } from 'react-redux'
+import React, { Component } from 'react';
+
+import TableRow from './Components/TableRow';
+
+import { DisplayData } from './Redux/Actions/Actions'
 
 
-import getData from './Services/ApiService';
-
-function App() {
-
-  const [data, setData] = React.useState([]);
 
 
-  useEffect(() => {
-    getData().then((newData) => {
-      setData(newData);
-    })
-  }, []);
+export class App extends Component {
 
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-        Something new
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  componentDidMount() {
+    this.props.DisplayData();
+  }
+
+  render() {
+    const { visableData, dropdownData, loading, error } = this.props;
+
+
+    const table = (
+      <table>
+        <tr>
+          <th>CMC Rank</th>
+          <th>Symbol</th>
+          <th>Price (USD)</th>
+        </tr>
+        {visableData.map(element => <TableRow key={element.symbol} data={element} />)}
+      </table>
+    )
+
+
+
+    return (
+      <div>
+        {table}
+      </div>
+    )
+  }
 }
 
-export default App;
+
+
+
+const mapStateToProps = state => ({
+  loading: state.loading,
+  visableData: state.visableData,
+  dropdownData: state.dropdownData,
+  error: state.error
+})
+
+export default connect(mapStateToProps, { DisplayData })(App);
