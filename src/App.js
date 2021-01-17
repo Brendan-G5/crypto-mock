@@ -22,6 +22,12 @@ export class App extends Component {
     console.log('VISABLE', visableData);
     console.log('DROPDOWN', dropdownData);
 
+    const tableRows = visableData.length ? (
+        visableData.map(element => <TableRow key={element.symbol} data={element} />)
+    ) : (
+      <th colspan = '3'>No Data to Show</th>
+    )
+
 
     const table = (
       <table>
@@ -30,7 +36,7 @@ export class App extends Component {
           <th>Symbol</th>
           <th>Price (USD)</th>
         </tr>
-        {visableData.map(element => <TableRow key={element.symbol} data={element} />)}
+        {tableRows}
       </table>
     )
 
