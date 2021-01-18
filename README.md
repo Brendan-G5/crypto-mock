@@ -5,7 +5,7 @@
 
 ## Want to Try?
 
-Click ![Here](https://crypto-mock.netlify.app/)
+Click [Here](https://crypto-mock.netlify.app/)
 
 
 ## How to use it?
