@@ -19,7 +19,6 @@ cd crypto-mock
 npm i
 
 npm start
-
 ```
 
 
