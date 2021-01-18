@@ -25,7 +25,7 @@ class Dropdown extends Component {
     return (
       <div className='dropdown'>
         <select className='select-css' id='selected' onChange={manageClick} disabled={!dropdownData.length}>
-          <option style={{display:'none'}} selected="selected" >Additional Options</option>
+          <option style={{display:'none'}} defaultValue >Additional Options</option>
           {dropdownData.map((element, index) => <option key={element.symbol} value={index}>{element.name} ({element.symbol})</option>)}
         </select>
       </div>

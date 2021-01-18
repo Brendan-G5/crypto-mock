@@ -12,7 +12,7 @@ async function getData() {
   mapData.data.forEach(element => {
     symbolList.push(element.symbol)
   });
-  const quotesData = await fetchRequest('/quotes?' + new URLSearchParams ({symbol:symbolList, convert:'USD' }));
+  const quotesData = await fetchRequest('/quotes?' + new URLSearchParams ({symbol:symbolList}));
   const finalData = [];
   for (const element in quotesData.data) {
     finalData.push({

@@ -22,11 +22,13 @@ class Table extends Component {
     const solo = visableData.length === 1;
 
     let tableRows = error ? (
-      <th colspan='4'>An error has occured... Try Reloading</th>
+      <tr colSpan='4'>An error has occured... Try Reloading</tr>
     ) : (loading ? (
-      <th colspan = '4'>
-        <div className='loader'></div>
-      </th>
+      <tr>
+        <td colSpan='4'>
+          <div className='loader'></div>
+        </td>
+      </tr>
     ) : (
         visableData.map(element => <TableRow key={element.symbol} data={element} solo={solo} />)
       )
@@ -34,13 +36,17 @@ class Table extends Component {
 
     return (
       <table className='table'>
-        <tr>
-          <th>CMC Rank</th>
-          <th>Symbol</th>
-          <th>Price (USD)</th>
-          <th>Remove</th>
-        </tr>
-        {tableRows}
+        <thead>
+          <tr>
+            <th>CMC Rank</th>
+            <th>Symbol</th>
+            <th>Price (USD)</th>
+            <th>Remove</th>
+          </tr>
+        </thead>
+        <tbody>
+          {tableRows}
+        </tbody>
       </table>
     )
   }
