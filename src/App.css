@@ -23,7 +23,7 @@
 .dropdown {
   margin: 5%;
   margin-left: 20px;
-  width: 200px;
+  min-width: 185px;
 }
 
 .table {
