@@ -1,4 +1,4 @@
-import { LOADING_DATA, SET_DATA, UPDATE_DATA, SET_LOADING, SET_ERROR } from '../Types'
+import { LOADING_DATA, SET_DATA, UPDATE_DATA, SET_ERROR } from '../Types'
 
 
 const defaultState = {

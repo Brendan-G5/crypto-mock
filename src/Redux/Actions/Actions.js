@@ -1,5 +1,5 @@
 import getData from '../../Services/ApiService'
-import {LOADING_DATA, SET_DATA, UPDATE_DATA, SET_LOADING, SET_ERROR} from '../Types'
+import {LOADING_DATA, SET_DATA, UPDATE_DATA, SET_ERROR} from '../Types'
 
 
 export const DisplayData = () => dispatch => {

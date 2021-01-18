@@ -8,7 +8,17 @@ import {TransferElement} from '../Redux/Actions/Actions'
 export class Table extends Component {
 
   render() {
-    const {data} = this.props
+    const {data, solo} = this.props
+
+    const removeButton = solo ? (
+      <button disabled>X</button>
+
+      ): (
+        <button onClick={() => this.props.TransferElement(data)}>X</button>
+
+      )
+
+
 
     return (
       <tr>
@@ -22,7 +32,7 @@ export class Table extends Component {
           {data.price}
         </td>
         <td>
-          <button onClick={() => this.props.TransferElement(data)}>X</button>
+          {removeButton}
         </td>
       </tr>
     )
