@@ -34,4 +34,4 @@ This was made with React, using Redux for state managment.
 
 ## Improvements
 
-- This app could have way more features, more than 10 currencies, visual representation of the price... etc
+- This app could have way more features, more than 10 currencies, visual representation of the price... etc.
