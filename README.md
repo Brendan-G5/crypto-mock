@@ -5,6 +5,10 @@
 
 ## Want to Try?
 
+Click [Here!](https://crypto-mock.netlify.app/)
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/e442f5b1-0d88-4979-9997-a0592b0a2e97/deploy-status)](https://app.netlify.com/sites/crypto-mock/deploys)
+
 
 ## How to use it?
 
@@ -30,4 +34,4 @@ This was made with React, using Redux for state managment.
 
 ## Improvements
 
-- This app could have way more features, more than 10 currencies, visual representation of the price... etc.
+- This app could have way more features, more than 10 currencies, visual representation of the price... etc
