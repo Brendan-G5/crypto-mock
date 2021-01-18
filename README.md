@@ -7,7 +7,7 @@
 
 Click [Here!](https://crypto-mock.netlify.app/)
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/e442f5b1-0d88-4979-9997-a0592b0a2e97/deploy-status)](https://app.netlify.com/sites/crypto-mock/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/60d6165b-e5ca-432a-9e2f-9869011b405f/deploy-status)](https://app.netlify.com/sites/crypto-mock/deploys)
 
 Netlify not working/taking a long time? (it does that sometimes...)
 
