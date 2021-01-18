@@ -9,6 +9,21 @@ Click [Here!](https://crypto-mock.netlify.app/)
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/e442f5b1-0d88-4979-9997-a0592b0a2e97/deploy-status)](https://app.netlify.com/sites/crypto-mock/deploys)
 
+Netlify not working/taking a long time? (it does that sometimes...)
+
+Run this in your command line instead
+
+```
+git clone https://github.com/Brendan-G5/crypto-mock.git
+
+cd crypto-mock
+
+npm i
+
+npm start
+```
+
+
 
 ## How to use it?
 
@@ -30,7 +45,7 @@ Click [Here!](https://crypto-mock.netlify.app/)
 
 ## Tech
 
-This was made with React, using Redux for state managment. 
+This was made with React (create-react-app), using Redux for state managment. 
 
 ## Improvements
 
