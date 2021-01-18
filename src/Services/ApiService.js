@@ -31,8 +31,8 @@ function fetchRequest(path) {
   return fetch(BASE_URL + path)
     .then((res) => (res.status <= 400 ? res.json() : Promise.reject(res)))
     .catch((err) => {
-      console.log(err); // eslint-disable-line no-console
-      console.log('error during fetch request'); // eslint-disable-line no-console
+      console.log(err);
+      console.log('error during fetch request');
     });
 }
 

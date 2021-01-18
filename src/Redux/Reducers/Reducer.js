@@ -25,14 +25,12 @@ const sortByCmc = (arr) => {
 export default function (state = defaultState, action) {
   switch (action.type) {
     case LOADING_DATA: {
-      console.log('Loading data HAPPENING!')
       return {
         ...state,
         loading: true
       }
     }
     case SET_DATA:
-      console.log('SET_DATA HAPPENING!',)
       return {
         ...state,
         visableData: action.payload.slice(0, 5),

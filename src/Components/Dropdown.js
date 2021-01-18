@@ -19,7 +19,6 @@ class Dropdown extends Component {
 
     const manageClick = () => {
       let index = document.getElementById('selected').value;
-      console.log(dropdownData[index])
       this.props.TransferElement((dropdownData[index]));
     }
 
