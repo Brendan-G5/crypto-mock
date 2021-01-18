@@ -12,9 +12,11 @@ Netlify not working? (it does that sometimes...)
 Run this in your command line
 
 ```
-git clone BLAH
+git clone https://github.com/Brendan-G5/crypto-mock.git
 
 cd crypto-mock
+
+npm i
 
 npm start
 
@@ -42,7 +44,7 @@ npm start
 
 ## Tech
 
-This was made with React, using Redux for state managment. 
+This was made with React (create-react-app), using Redux for state managment. 
 
 ## Improvements
 
