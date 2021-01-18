@@ -7,6 +7,8 @@
 
 Click [Here!](https://crypto-mock.netlify.app/)
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/e442f5b1-0d88-4979-9997-a0592b0a2e97/deploy-status)](https://app.netlify.com/sites/crypto-mock/deploys)
+
 
 ## How to use it?
 
