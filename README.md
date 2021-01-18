@@ -5,6 +5,8 @@
 
 ## Want to Try?
 
+Click ![Here](crypto-mock.netlify.app)
+
 
 ## How to use it?
 
