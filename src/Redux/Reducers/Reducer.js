@@ -1,6 +1,6 @@
 import { LOADING_DATA, SET_DATA, UPDATE_DATA, SET_ERROR } from '../Types'
 
-
+//Defualt state here
 const defaultState = {
   loading: true,
   visableData: [],
@@ -8,15 +8,22 @@ const defaultState = {
   error: false
 }
 
+//Using this to sort the lists by CMC, though not nessecary thought it would be nicer
 const sortByCmc = (arr) => {
   return arr.sort(function (a, b) {
     return a.cmc_rank - b.cmc_rank
   });
 }
 
+
+//Here is the reducer, decided to only go with one reducer as this is a small application.
+//Only 4 cases
+//LOADING_DATA: Called on start up and shows spinner while API calls run
+//SET_DATA: Removes spinner and splits the ordered payload (array of 10 objects) into initial groups of 5 and 5
+//UPDATE_DATA: Checks if object is in the table or dropdown, then removes from the one it's in and adds to the other
+//SET_ERROR: Sets the error value as true if API call fails
 export default function (state = defaultState, action) {
   switch (action.type) {
-
     case LOADING_DATA: {
       console.log('Loading data HAPPENING!')
       return {

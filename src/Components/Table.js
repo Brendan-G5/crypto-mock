@@ -1,10 +1,20 @@
+//CSS
 import '../App.css';
-import { connect } from 'react-redux'
+
+//React
 import React, { Component } from 'react';
 
+//Redux
+import { connect } from 'react-redux'
+
+//Components
 import TableRow from './TableRow';
 
-export class Table extends Component {
+//DOC:
+//The table component has no Actions, just props. The loader, error message and Table rows are handled in the tableRows variable
+//Info is passed to a TableRow component for each object. The Solo variable is used to tell if there is only one item left in the table
+
+class Table extends Component {
 
   render() {
     const { visableData, error, loading } = this.props;
@@ -35,7 +45,6 @@ export class Table extends Component {
     )
   }
 }
-
 
 const mapStateToProps = state => ({
   visableData: state.visableData,

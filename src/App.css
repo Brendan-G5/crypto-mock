@@ -1,9 +1,8 @@
 .app {
   display: flex;
   flex-direction: column;
-  padding: 5% 10% 5% 10%;
+  padding: 2% 10% 2% 10%;
   box-sizing: border-box;
-  height: 100vh;
   font-family: sans-serif;
 }
 
@@ -29,13 +28,11 @@
 
 .table {
   flex-grow: 2;
-  flex-shrink: 2;
   flex-basis: 100%;
   padding: 3%;
   border-radius: 25px;
   box-shadow: -8px 12px 11px -3px rgba(0,0,0,0.45);
   background-color: #1A5276;
-  overflow: scroll;
   margin-bottom: 30px
 }
 
@@ -56,14 +53,13 @@ tr:nth-of-type(even) {
   background-color: white;
 }
 
-
 td {
   text-align: center;
   padding: 12px
 }
 
 
-/* Here is some styling taking from the following for the select option
+/* Here is some styling taking from the following for the select option, with some edits
 https://css-tricks.com/styling-a-select-like-its-2019/
 
 */
@@ -140,7 +136,7 @@ https://css-tricks.com/styling-a-select-like-its-2019/
   border-color: #aaa;
 }
 
-/* Here is some styling taking from the following for the loading spinner
+/* Here is some styling taking from the following for the loading spinner, with some edits
 https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_loader
 
 */

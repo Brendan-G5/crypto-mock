@@ -1,13 +1,22 @@
+//CSS
 import './App.css';
-import { connect } from 'react-redux'
+
+//React
 import React, { Component } from 'react';
 
+//Components
 import Table from './Components/Table'
 import Dropdown from './Components/Dropdown'
 
+//Redux
+import { connect } from 'react-redux'
 import { DisplayData } from './Redux/Actions/Actions';
 
-export class App extends Component {
+//DOC:
+//The App component simply calls the API on load through the Display Data Action.
+//Pulls in the Table and the drop down Components
+
+class App extends Component {
 
   componentDidMount() {
     this.props.DisplayData();
@@ -28,7 +37,5 @@ export class App extends Component {
     )
   }
 }
-
-
 
 export default connect(null, {DisplayData})(App);

@@ -1,16 +1,18 @@
+//CSS
 import '../App.css';
-import { connect } from 'react-redux'
+
+//React
 import React, { Component } from 'react';
 
-
+//Redux
+import { connect } from 'react-redux'
 import { TransferElement } from '../Redux/Actions/Actions';
 
-
-
-
-
-export class Dropdown extends Component {
-
+//DOC:
+//The Dropdown component takes the dropdown data and places it in a select tag
+//ManageClick function is used to call the Transfer element action and pass along the object as well.
+//Dropdown is disabled if there are no longer options to choose from
+class Dropdown extends Component {
 
   render() {
     const { dropdownData } = this.props;
@@ -21,29 +23,16 @@ export class Dropdown extends Component {
       this.props.TransferElement((dropdownData[index]));
     }
 
-    const dropdown = (
+    return (
       <div className='dropdown'>
-        <select className='select-css'  id='selected' onChange={manageClick} disabled = {!dropdownData.length}>
+        <select className='select-css' id='selected' onChange={manageClick} disabled={!dropdownData.length}>
           <option selected="selected" >Additional Options</option>
           {dropdownData.map((element, index) => <option key={element.symbol} value={index}>{element.name} ({element.symbol})</option>)}
         </select>
       </div>
     )
-
-
-
-
-
-    return (
-      <div>
-        {dropdown}
-      </div>
-    )
   }
 }
-
-
-
 
 const mapStateToProps = state => ({
   dropdownData: state.dropdownData,
