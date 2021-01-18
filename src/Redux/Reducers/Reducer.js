@@ -22,7 +22,7 @@ const sortByCmc = (arr) => {
 //SET_DATA: Removes spinner and splits the ordered payload (array of 10 objects) into initial groups of 5 and 5
 //UPDATE_DATA: Checks if object is in the table or dropdown, then removes from the one it's in and adds to the other
 //SET_ERROR: Sets the error value as true if API call fails
-export default function (state = defaultState, action) {
+const Reducers = (state = defaultState, action) => {
   switch (action.type) {
     case LOADING_DATA: {
       return {
@@ -66,3 +66,5 @@ export default function (state = defaultState, action) {
     }
   }
 }
+
+export default Reducers;
