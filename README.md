@@ -2,7 +2,7 @@
 
 ## A simple App displaying cryptocurrencies  
 
-NOT REAL CRYPTOCURRENCIES, DATA IS RANDOMLY GENERATED FROM AN API. This is mainly an exercise with Redux.
+Not real cryptocurrency prices, data is randomly generated from an API. This is mainly an exercise with Redux.
 
 ## Want to Try?
 
