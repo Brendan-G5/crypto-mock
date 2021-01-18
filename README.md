@@ -7,11 +7,11 @@
 
 Click [Here!](https://crypto-mock.netlify.app/)
 
-Netlify not working? (it does that sometimes...)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/e442f5b1-0d88-4979-9997-a0592b0a2e97/deploy-status)](https://app.netlify.com/sites/crypto-mock/deploys)
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/e442f5b1-0d88-4979-9997-a0592b0a2e97/deploy-status)](https://app.netlify.com/sites/crypto-mock/deploys) (DONT TRUST THIS)
+Netlify not working/taking a long time? (it does that sometimes...)
 
-Run this in your command line
+Run this in your command line instead
 
 ```
 git clone https://github.com/Brendan-G5/crypto-mock.git
